@@ -1,4 +1,31 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import { createRouter, createWebHistory } from 'vue-router'
 
-createApp(App).mount('#app')
+import EdsList from "./components/eds/EdsList.vue"
+import InventItem from "@/components/invent/Invent";
+
+
+const router = createRouter({
+    routes: [
+        /* {
+            path: '/',
+            component: HomeView
+        } */
+        {
+            path: '/eds',
+            name: 'eds',
+            component: EdsList
+        },
+        {
+            path: '/invent',
+            name: 'invent',
+            component: InventItem
+        }
+    ],
+    history: createWebHistory()
+})
+
+const app = createApp(App)
+app.use(router);
+app.mount('#app')
