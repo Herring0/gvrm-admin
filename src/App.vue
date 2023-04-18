@@ -1,17 +1,17 @@
 <template>
-  <Header user="Гуреев Юрий Сергеевич"></Header>
+  <TheHeader user="Гуреев Юрий Сергеевич"></TheHeader>
   <!-- <InventItem></InventItem> -->
   <!-- <EdsList></EdsList> -->
   <router-view />
 </template>
 
 <script>
-import Header from './components/Header.vue';
+import TheHeader from './components/TheHeader.vue';
 
 export default {
   name: 'App',
   components: {
-    Header
+    TheHeader
   }
 }
 </script>

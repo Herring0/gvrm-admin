@@ -3,7 +3,7 @@ import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import EdsList from "./components/eds/EdsList.vue"
-import InventItem from "@/components/invent/Invent";
+import TheInvent from "@/components/invent/TheInvent";
 
 
 const router = createRouter({
@@ -20,7 +20,7 @@ const router = createRouter({
         {
             path: '/invent',
             name: 'invent',
-            component: InventItem
+            component: TheInvent
         }
     ],
     history: createWebHistory()

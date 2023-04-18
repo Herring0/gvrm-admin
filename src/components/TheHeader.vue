@@ -7,10 +7,10 @@
                     <nav role="navigation" class="nav-menu-wrapper">
                         <ul class="nav-menu">
                             <li>
-                                <a href="#" class="nav-link">Инвентаризация</a>
+                              <router-link to="invent" class="nav-link">Инвентаризация</router-link>
                             </li>
                             <li>
-                                <a href="#" class="nav-link">ЭЦП</a>
+                                <router-link to="eds" class="nav-link">ЭЦП</router-link>
                             </li>
                             <li>
                                 <a href="#" class="nav-link">VPN</a>
@@ -36,7 +36,7 @@
   
 <script>
 export default {
-    name: 'HeaderItem',
+    name: 'TheHeader',
     props: {
         msg: String,
         user: String
