@@ -6,11 +6,11 @@
         <h2>ЭЦП сотрудников</h2>
         <ul class="responsive-table" id="eds-table">
           <li class="table-header">
-            <div class="col col-1">ФИО</div>
-            <div class="col col-2">Действителен до</div>
-            <div class="col col-3">Дней до окончания</div>
-            <div class="col col-4">Тип</div>
-            <div class="col col-5">Серийный номер</div>
+            <span class="col col-1">ФИО</span>
+            <span class="col col-2">Действителен до</span>
+            <span class="col col-3">Дней до окончания</span>
+            <span class="col col-4">Тип</span>
+            <span class="col col-5">Серийный номер</span>
           </li>
           <EdsListItem v-for="el in eds" :key="el.SN" :eds="el"></EdsListItem>
         </ul>
@@ -35,7 +35,7 @@ export default {
   },
   mounted() {
     axios
-      .get(`http://localhost:8080/api/certificates/list`)
+      .get(`${process.env.VUE_APP_BACKEND_HOST}/certificates/list`)
       .then(response => { (this.eds = response.data) });
   }
 }
@@ -79,6 +79,7 @@ h2 small {
   padding: 25px 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 25px;
 }
 
@@ -95,8 +96,16 @@ h2 small {
   }
 }
 
+.col {
+  font-size: 16px;
+}
+
+:deep(.col) {
+  text-align: center;
+}
+
 :deep(.col-1) {
-  flex-basis: 35%;
+  flex-basis: 30%;
 }
 
 :deep(.col-2) {
@@ -108,7 +117,7 @@ h2 small {
 }
 
 :deep(.col-4) {
-  flex-basis: 10%;
+  flex-basis: 15%;
 }
 
 :deep(.col-5) {

@@ -1,10 +1,10 @@
 <template>
     <li class="table-row">
-        <div class="col col-1" data-label="owner">{{ eds.owner }}</div>
-        <div class="col col-2" data-label="notAfter">{{ formatDate(eds.notAfter) }}</div>
-        <div class="col col-3" data-label="daysLeft">{{ dayLeft(eds.notAfter) }}</div>
-        <div class="col col-4" data-label="type">{{ eds.type }}</div>
-        <div class="col col-5" data-label="buttons">{{ eds.sn }}</div>
+        <span class="col col-1" data-label="owner">{{ eds.owner }}</span>
+        <span class="col col-2" data-label="notAfter">{{ formatDate(eds.notAfter) }}</span>
+        <span class="col col-3" data-label="daysLeft">{{ dayLeft(eds.notAfter) }}</span>
+        <span class="col col-4" data-label="type">{{ eds.type }}</span>
+        <span class="col col-5" data-label="buttons">{{ eds.sn }}</span>
     </li>
 </template>
   

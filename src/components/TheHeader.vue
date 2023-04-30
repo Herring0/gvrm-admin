@@ -38,7 +38,6 @@
 export default {
     name: 'TheHeader',
     props: {
-        msg: String,
         user: String
     }
 }

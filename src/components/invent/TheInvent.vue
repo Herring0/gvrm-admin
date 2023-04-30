@@ -23,13 +23,15 @@ export default {
 </script>
 
 <style scoped>
+
 .main-wrapper {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 15px;
 }
+
 </style>
